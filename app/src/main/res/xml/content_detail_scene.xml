@@ -2,7 +2,7 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Transition
-        app:duration="2000"
+        app:duration="3000"
         app:constraintSetStart="@id/start"
         app:constraintSetEnd="@id/end" >
         <OnSwipe
@@ -11,12 +11,6 @@
             app:touchAnchorSide="top"
             />
         <KeyFrameSet>
-            <KeyPosition
-                app:framePosition="40"
-                app:motionTarget="@+id/ok_button"
-                app:keyPositionType="parentRelative"
-                app:percentY="0.40"
-                />
 
             <KeyAttribute
                 app:framePosition="60"
@@ -24,16 +18,15 @@
                 app:motionTarget="@+id/ok_button"
                 />
             <KeyAttribute
-                app:framePosition="90"
+                app:framePosition="80"
                 android:rotation="720"
                 android:alpha="0.0"
                 app:motionTarget="@+id/ok_button"
                 />
             <KeyAttribute
-                app:framePosition="90"
+                app:framePosition="85"
                 app:motionTarget="@+id/imageView"
-                android:alpha="0.1"
-                android:scaleX="1.0"
+                android:alpha="0.0"
                 />
         </KeyFrameSet>
     </Transition>
@@ -49,7 +42,7 @@
             app:layout_constraintTop_toBottomOf="@+id/status_label_text"
             app:layout_constraintVertical_bias="0.95" />
         <Constraint
-            android:id="@+id/imageView"
+            android:id="@+id/icon"
             android:alpha="0.0"
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -74,7 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/status_label_text"
             app:layout_constraintVertical_bias="0.22" />
         <Constraint
-            android:id="@+id/imageView"
+            android:id="@+id/icon"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:alpha="1.0"

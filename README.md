@@ -1,5 +1,5 @@
-###3rd project of Udacity nanodegree program for Android developer by Kotlin
-##Project Overview
+### 3rd project of Udacity nanodegree program for Android developer by Kotlin
+## Project Overview
 In this project students will create an app to download a file from the Internet by clicking on a custom-built button where:<br>
 - width of the button gets animated from left to right<br>
 - text gets changed based on different states of the button<br>

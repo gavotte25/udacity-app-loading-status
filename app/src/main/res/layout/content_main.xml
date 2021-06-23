@@ -23,21 +23,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/normal_margin"
-            android:text="@string/glide_button" />
+            android:text="@string/glide_button"
+            android:textSize="@dimen/default_text_size" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/normal_margin"
-            android:text="@string/loadapp_button" />
+            android:text="@string/loadapp_button"
+            android:textSize="@dimen/default_text_size" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/normal_margin"
-            android:text="@string/retrofit_button" />
+            android:text="@string/retrofit_button"
+            android:textSize="@dimen/default_text_size" />
     </RadioGroup>
 
     <com.udacity.LoadingButton

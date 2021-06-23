@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:duration="2000"
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end" >
+        <OnSwipe
+            app:touchAnchorId="@id/ok_button"
+            app:dragDirection="dragUp"
+            app:touchAnchorSide="top"
+            />
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="40"
+                app:motionTarget="@+id/ok_button"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.40"
+                />
+
+            <KeyAttribute
+                app:framePosition="60"
+                android:scaleX="0.3"
+                app:motionTarget="@+id/ok_button"
+                />
+            <KeyAttribute
+                app:framePosition="90"
+                android:rotation="720"
+                android:alpha="0.0"
+                app:motionTarget="@+id/ok_button"
+                />
+            <KeyAttribute
+                app:framePosition="90"
+                app:motionTarget="@+id/imageView"
+                android:alpha="0.1"
+                android:scaleX="1.0"
+                />
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/ok_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_label_text"
+            app:layout_constraintVertical_bias="0.95" />
+        <Constraint
+            android:id="@+id/imageView"
+            android:alpha="0.0"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_label_text"
+            app:layout_constraintVertical_bias="0.22"
+            />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/ok_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:alpha="0.0"
+            android:rotation="720"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_label_text"
+            app:layout_constraintVertical_bias="0.22" />
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:alpha="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_label_text"
+            app:layout_constraintVertical_bias="0.22"
+            />
+    </ConstraintSet>
+</MotionScene>
